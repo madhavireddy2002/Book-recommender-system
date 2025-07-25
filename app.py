@@ -79,7 +79,7 @@ if st.sidebar.button("Recommend me "):
 
 #import data
 
-books = pd.read_csv("Data/Books.csv")
+books = pd.read_csv("Data/Books.csv", dtype=str, low_memory=False)
 users = pd.read_csv("Data/Users.csv")
 ratings = pd.read_csv("Data/Ratings.csv")
 
