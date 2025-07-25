@@ -21,6 +21,8 @@ similarity_scores = pkl.load(open("similarity_scores.pkl","rb"))
 
 # to 50 books 
 
+
+
 st.sidebar.title("Top 50 Books")
 
 if st.sidebar.button("show"):
@@ -75,10 +77,11 @@ if st.sidebar.button("Recommend me "):
 
 #import data
 
-books = pd.read_csv("C:\\Users\\govig\\Desktop\\BOOK RECOMMENDER\\Data\\Books.csv")
-users = pd.read_csv("C:\\Users\\govig\\Desktop\\BOOK RECOMMENDER\\Data\\Users.csv")
-ratings = pd.read_csv("C:\\Users\\govig\\Desktop\\BOOK RECOMMENDER\\Data\\Ratings.csv")
+#import data
 
+books = pd.read_csv("Data/Books.csv")
+users = pd.read_csv("Data/Users.csv")
+ratings = pd.read_csv("Data/Ratings.csv")
 
 st.sidebar.title("Data Used")
 
@@ -89,6 +92,7 @@ if st.sidebar.button("SHOW"):
     st.dataframe(ratings)
     st.subheader("this is the user data we used in our model")
     st.dataframe(users)
+
 
                 
                   
